@@ -30,7 +30,7 @@ Hence, the encoder can be realised with OR gates as follows:
 ![image](https://user-images.githubusercontent.com/36288975/171543740-68403b82-aa93-4c98-9343-f32b14885a2e.png)
 ## Figure -02 3 to 8 Encoder implenentation 
 
- ### Decoders 
+### Decoders 
 A decoder does the opposite job of an encoder. It is a combinational circuit that converts n lines of input into 2n lines of output.
 
 Let’s take an example of 3-to-8 line decoder.
@@ -79,7 +79,7 @@ Run the program and choose RTL viewer to get RTL realization.
 
 
 ### PROGRAM 
-``
+```
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
 Developed by: J.DEEPIKA
 RegisterNumber: 212221230016 
