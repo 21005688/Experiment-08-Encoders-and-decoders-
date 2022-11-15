@@ -1,7 +1,10 @@
 # Experiment-08- Encoders-and-decoders 
-### AIM: To implement 8 to 3 Encoder and  3to8 Decoder using verilog and validate its outputs
+### AIM:
+To implement 8 to 3 Encoder and  3to8 Decoder using verilog and validate its outputs
 ### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### SOFTWARE REQUIRED: 
+Quartus prime
+
 ### THEORY 
 
 ## Encoders
@@ -55,42 +58,76 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
+## Step 1:
+Open Quartus II and select new project and choose the file location.
+
+## Step 2:
+Module Declaration. Module should have the file name.
+
+## Step 3:
+Input-Output Delecaration.
+
+## Step 4:
+Use assign to define the functionality of logic circuits.
+
+## Step 5:
+At the end give endmodule.
+
+## Step 6:
+Run the program and choose RTL viewer to get RTL realization.
 
 
 
 ### PROGRAM 
-/*
+``
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: J.DEEPIKA
+RegisterNumber: 212221230016 
 
+```
+### Encoder
+```
+module Encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+input d0,d1,d2,d3,d4,d5,d6,d7;
+output a,b,c;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+```
 
+### Decoder
+```
+module Decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+input a,b,c;
+output d0,d1,d2,d3,d4,d5,d6,d7;
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c);
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c);
+assign d4 = (a&~b&~c);
+assign d5 = (a&~b&c);
+assign d6 = (a&b&~c);
+assign d7 = (a&b&c);
+endmodule
+```
+## OUTPUT:
+## ENCODER:
+## RTL LOGIC
 
+![p1](https://user-images.githubusercontent.com/94747031/201876824-bd667aa4-251b-4c96-8904-f04312178f01.png)
+## TIMING DIGRAMS
 
+![p2](https://user-images.githubusercontent.com/94747031/201876860-3f51d597-01f7-474a-b5ee-490854b7253a.png)
 
+## DECODER:
+## RTL LOGIC
 
-### RTL LOGIC  
+![p3](https://user-images.githubusercontent.com/94747031/201876880-7bb0bdd4-323e-4ebe-912b-e1b9ba21d088.png)
 
+## TIMING DIGRAMS
 
-
-
-
-
-
-
-### TIMING DIGRAMS  
-
-
-
-
-
-### TRUTH TABLE 
-
-
-
-
-
+![p4](https://user-images.githubusercontent.com/94747031/201876900-68da1792-ff8b-4782-b454-10936119da9f.png)
 
 ### RESULTS 
+Thus, 8 to 3 Encoder and 3 to 8 Decoder is implemented using verilog and its outputs is validated.
